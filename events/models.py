@@ -23,9 +23,11 @@ class Event(models.Model):
     event_type = models.ForeignKey(EventType, on_delete=models.CASCADE)
     event_description = models.CharField(max_length=200)
     tags = models.ManyToManyField(Tag, blank=True)
+    star_rating = models.IntegerField(default=1)
 
     class Meta:
-        ordering = ['-event_day']
+        ordering = ['-event_day', '-id']
 
     def __str__(self):
-        return f"{self.event_day.strftime('%d/%m/%Y')} {self.event_type} {self.event_description}"
+        star = "\u2b50"
+        return f"{self.event_day.strftime('%d/%m/%Y')} {self.star_rating * star} {self.event_type} {self.event_description}"

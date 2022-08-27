@@ -1,0 +1,3 @@
+[  ] limit events to last "days_back" days (default=7)
+
+[OK] 1-5 star rating
