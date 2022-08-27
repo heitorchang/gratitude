@@ -28,4 +28,4 @@ class Event(models.Model):
         ordering = ['-event_day']
 
     def __str__(self):
-        return f"{self.event_day.strftime('%d/%m/%Y')} {self.event_description}"
+        return f"{self.event_day.strftime('%d/%m/%Y')} {self.event_type} {self.event_description}"
