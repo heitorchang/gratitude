@@ -8,7 +8,8 @@
     </head>
     <body>
       <a href="{% url 'events:index' %}">Home</a> &bullet;
-      <a href="{% url 'events:add' %}">Add event</a>
+      <a href="{% url 'events:add' %}">Add event</a> &bullet;
+      <a href="{% url 'admin:index' %}">Admin</a>
       <div>
         {% block content %}
         {% endblock %}
