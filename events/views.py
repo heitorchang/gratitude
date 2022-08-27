@@ -28,11 +28,13 @@ def add(request):
 
             # add existing tags
             for tag in tags:
-                new_event_tags.append(Tag.objects.get(tag_text=tag))
+                if tag:
+                    new_event_tags.append(Tag.objects.get(tag_text=tag))
 
             for new_tag_name in new_tags_comma_separated.split(','):
-                tag_object, created = Tag.objects.get_or_create(tag_text=new_tag_name.strip())
-                new_event_tags.append(tag_object)
+                if new_tag_name:
+                    tag_object, created = Tag.objects.get_or_create(tag_text=new_tag_name.strip())
+                    new_event_tags.append(tag_object)
 
             new_event = Event.objects.create(
                 event_day=event_day,
