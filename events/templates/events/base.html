@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <title>HC gratitude</title>
+    </head>
+    <body>
+      <a href="{% url 'events:index' %}">Home</a> &bullet;
+      <a href="{% url 'events:add' %}">Add event</a>
+      <div>
+        {% block content %}
+        {% endblock %}
+      </div>
+    </body>
+</html>

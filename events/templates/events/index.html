@@ -1,6 +1,18 @@
-<body>
-  Events Index
+{% extends "events/base.html" %}
+
+{% block content %}
+<ul>
   {% for event in events %}
-  {{ event }}
+  <li>
+    {{ event }}
+    <ul>
+      {% for tag in event.tags.all %}
+      <li>
+        {{ tag }}
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
   {% endfor %}
-</body>
+</ul>
+{% endblock %}

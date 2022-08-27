@@ -14,6 +14,9 @@ class EventType(models.Model):
 class Tag(models.Model):
     tag_text = models.CharField(max_length=80)
 
+    class Meta:
+        ordering = ['tag_text']
+
     def __str__(self):
         return self.tag_text
 
