@@ -4,15 +4,28 @@
 <ul class="event-list">
   {% for event in events %}
   <li class="event">
-    {{ event }}
-    &nbsp;
+    <span class="event-day">{{ event.event_day }}</span>
+    {% with ''|center:event.star_rating as range %}
+    {% for i in range %}
+    &#x2b50;
+    {% endfor %}
+    {% endwith %}
+
     <ul class="tag-list">
       {% for tag in event.tags.all %}
       <li class="tags">
-        {{ tag }}
+        {% autoescape on %}
+        <a href="{% url 'events:tag' tag %}" class="tag-link">
+          {% endautoescape %}
+          {{ tag }}
+        </a>
       </li>
       {% endfor %}
     </ul>
+    <div class="event-details">
+      {{ event.event_type }}
+      {{ event.event_description }}
+    </div>
   </li>
   {% endfor %}
 </ul>

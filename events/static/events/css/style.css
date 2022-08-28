@@ -1,13 +1,22 @@
 body {
-    background-color: #fff0ff;
+    background-color: #ffffe0;
     font-family: sans-serif;
     line-height: 1.2rem;
 }
 
 a {
     text-decoration: none;
-    color: #39f;
-    font-size: 1.4rem;
+    color: #32f;
+    font-size: 1.2rem;
+}
+
+a.header-link {
+    margin: 0 0.4rem;
+}
+
+a.footer-link {
+    margin: 0 0.4rem;
+    font-size: 0.9rem;
 }
 
 ul.event-list {
@@ -16,9 +25,13 @@ ul.event-list {
     list-style-type: none;
 }
 
+span.event-day {
+    margin-top: 0.3rem;
+}
+
 li.event {
     border-bottom: 1px solid #ccc;
-    padding: 1.2rem 0;
+    padding: 0.2rem 0 1.2rem 0;
 }
 
 ul.tag-list {
@@ -32,9 +45,8 @@ li.tags {
     display: inline-block;
     background-color: #365;
     color: white;
-    padding: 0.3rem;
+    padding: 0.15rem 0.4rem;;
     border-radius: 0.3rem;
-    font-size: 0.8rem;
     margin-top: 0.5rem;
 }
 
@@ -48,7 +60,7 @@ table.event-form input {
     border: 1px solid #ccc;
 }
 
-table.event-form select {
+select {
     border-radius: 0.3em;
     padding: 0.8em;
     border: 1px solid #ccc;
@@ -62,10 +74,19 @@ table.event-form tr th {
     padding-right: 1rem;
 }
 
-input[type=submit] {
+input[type=submit], button {
     background-color: #009;
     color: white;
     border: 1px solid #002;
     padding: 1rem;
     border-radius: 0.5rem;
+}
+
+.tag-link {
+    color: white;
+    font-size: 0.8em;
+}
+
+.event-details {
+    margin-top: 0.4rem;
 }

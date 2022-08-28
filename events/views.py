@@ -13,6 +13,19 @@ def index(request, days_back=7):
     })
 
 
+def tag(request, tag_name):
+    return render(request, "events/index.html", {
+        "events": Event.objects.filter(event_day__gte=datetime.now() - timedelta(days=90),
+                                       tags__tag_text=tag_name),
+    })
+
+
+def month(request, year, month):
+    return render(request, "events/index.html", {
+        "events": Event.objects.filter(event_day__year=year, event_day__month=month)
+    })
+
+
 def add(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
@@ -50,3 +63,7 @@ def add(request):
         form = EventForm()
 
     return render(request, "events/add_form.html", {'form': form})
+
+
+def month_form(request):
+    return render(request, "events/month_form.html")
