@@ -94,3 +94,19 @@ input[type=submit], button {
 .event-details {
     margin-top: 0.4rem;
 }
+
+.add-form {
+    padding: 0 0 0.4rem 0;
+    margin: 0.8rem 0.2rem;
+    list-style-type: none;
+}
+
+ul.add-form li {
+    align-items: top;
+    margin: 1.5rem 0;
+}
+
+ul.add-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+}

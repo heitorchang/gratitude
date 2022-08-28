@@ -4,9 +4,9 @@
 <body>
   <form action="{% url 'events:add' %}" method="post">
     {% csrf_token %}
-    <table class="event-form">
-      {{ form.as_table }}
-    </table>
+    <ul class="add-form">
+      {{ form.as_ul }}
+    </ul>
     <br><br>
     <input type="submit">
   </form>
