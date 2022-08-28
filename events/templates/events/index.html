@@ -1,13 +1,14 @@
 {% extends "events/base.html" %}
 
 {% block content %}
-<ul>
+<ul class="event-list">
   {% for event in events %}
-  <li>
+  <li class="event">
     {{ event }}
-    <ul>
+    &nbsp;
+    <ul class="tag-list">
       {% for tag in event.tags.all %}
-      <li>
+      <li class="tags">
         {{ tag }}
       </li>
       {% endfor %}

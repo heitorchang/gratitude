@@ -1,0 +1,71 @@
+body {
+    background-color: #fff0ff;
+    font-family: sans-serif;
+    line-height: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #39f;
+    font-size: 1.4rem;
+}
+
+ul.event-list {
+    padding: 0 0 0.4rem 0;
+    margin: 0.8rem 0.2rem;
+    list-style-type: none;
+}
+
+li.event {
+    border-bottom: 1px solid #ccc;
+    padding: 1.2rem 0;
+}
+
+ul.tag-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: 0.1rem;
+}
+
+li.tags {
+    display: inline-block;
+    background-color: #365;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+table.event-form td {
+    padding: 1.5em 0.2em;
+}
+
+table.event-form input {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+}
+
+table.event-form select {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+table.event-form tr th {
+    margin: 1.2rem 0.2rem;
+    color: #339;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+input[type=submit] {
+    background-color: #009;
+    color: white;
+    border: 1px solid #002;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}

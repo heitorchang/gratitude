@@ -33,4 +33,4 @@ class Event(models.Model):
 
     def __str__(self):
         star = "\u2b50"
-        return f"{self.event_day.strftime('%d/%m/%Y')} {self.star_rating * star} {self.event_type} {self.event_description}"
+        return f"{self.event_day.strftime('%b. %d')} {self.star_rating * star} {self.event_type} {self.event_description}"
