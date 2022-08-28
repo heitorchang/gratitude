@@ -74,6 +74,10 @@ table.event-form tr th {
     padding-right: 1rem;
 }
 
+input[type=date] {
+    background-color: white;
+}
+
 input[type=submit], button {
     background-color: #009;
     color: white;
