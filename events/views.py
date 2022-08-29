@@ -9,13 +9,13 @@ from .forms import EventForm
 
 def index(request, days_back=7):
     return render(request, "events/index.html", {
-        "events": Event.objects.filter(event_day__gte=datetime.now() - timedelta(days=days_back)),
+        "events": Event.objects.filter(event_day__gt=datetime.now() - timedelta(days=days_back)),
     })
 
 
 def tag(request, tag_name):
     return render(request, "events/index.html", {
-        "events": Event.objects.filter(event_day__gte=datetime.now() - timedelta(days=90),
+        "events": Event.objects.filter(event_day__gt=datetime.now() - timedelta(days=30),
                                        tags__tag_text=tag_name),
     })
 
@@ -23,6 +23,28 @@ def tag(request, tag_name):
 def month(request, year, month):
     return render(request, "events/index.html", {
         "events": Event.objects.filter(event_day__year=year, event_day__month=month)
+    })
+
+
+def search_words(request, days, words):
+    return render(request, "events/index.html", {
+        "events": Event.objects.filter(event_day__gt=datetime.now() - timedelta(days=days),
+                                       event_description__icontains=words)
+    })
+
+
+def tag_days(request, days, tag_name):
+    return render(request, "events/index.html", {
+        "events": Event.objects.filter(event_day__gt=datetime.now() - timedelta(days=days),
+                                       tags__tag_text=tag_name),
+    })
+
+
+def stars_between(request, days, lower_bound, upper_bound):
+    return render(request, "events/index.html", {
+        "events": Event.objects.filter(event_day__gt=datetime.now() - timedelta(days=days),
+                                       star_rating__gte=lower_bound,
+                                       star_rating__lte=upper_bound)
     })
 
 
@@ -67,3 +89,7 @@ def add(request):
 
 def month_form(request):
     return render(request, "events/month_form.html")
+
+
+def search_form(request):
+    return render(request, "events/search_form.html")

@@ -8,10 +8,15 @@
         <title>HC gratitude</title>
     </head>
     <body>
-      <a href="{% url 'events:index' %}" class="header-link">7d</a> &bullet;
-      <a href="{% url 'events:index_days_back' 90 %}" class="header-link">90d</a> &bullet;
-      <a href="{% url 'events:add' %}" class="header-link">Add</a> &bullet;
-      <a href="{% url 'events:month_form' %}" class="header-link">Month</a>
+      <a href="{% url 'events:index' %}" class="header-link">7d</a>
+      &bullet;
+      <a href="{% url 'events:index_days_back' 90 %}" class="header-link">90d</a>
+      &bullet;
+      <a href="{% url 'events:add' %}" class="header-link">new</a>
+      &bullet;
+      <a href="{% url 'events:month_form' %}" class="header-link">mon</a>
+      &bullet;
+      <a href="{% url 'events:search_form' %}" class="header-link">srch</a>
       <div>
         {% block content %}
         {% endblock %}

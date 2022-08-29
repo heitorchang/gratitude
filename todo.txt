@@ -1,3 +1,6 @@
-[  ] limit events to last "days_back" days (default=7)
+[  ] search: last 90 days by words /search_words/<str:words>, use encodeURI() in JS
+[  ] search: last 90 days by star /search_stars_between/<int:lower_bound>/<int:upper_bound
+[  ] search: last 90 days by tag /search_tag/<str:tag_name>
 
 [OK] 1-5 star rating
+[OK] limit events to last "days_back" days (default=7)
