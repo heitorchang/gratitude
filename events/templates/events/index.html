@@ -4,7 +4,7 @@
 <ul class="event-list">
   {% for event in events %}
   <li class="event">
-    <span class="event-day">{{ event.event_day }}</span>
+    <span class="event-day">{{ event.event_day|date:"D, j M." }}</span>
     {% with ''|center:event.star_rating as range %}
     {% for i in range %}
     &#x2b50;

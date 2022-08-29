@@ -27,6 +27,8 @@ ul.event-list {
 
 span.event-day {
     margin-top: 0.3rem;
+    font-family: monospace;
+    font-size: 0.8rem;
 }
 
 li.event {
