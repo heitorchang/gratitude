@@ -95,6 +95,7 @@ input[type=submit], button {
 
 .event-details {
     margin-top: 0.4rem;
+    max-width: 30rem;
 }
 
 .add-form {
@@ -111,4 +112,9 @@ ul.add-form li {
 ul.add-form label {
     display: block;
     margin-bottom: 0.3rem;
+}
+
+.event-details-paragraph {
+    color: #333;
+    font-size: 0.85rem;
 }

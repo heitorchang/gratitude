@@ -55,6 +55,7 @@ def add(request):
             event_day = form.cleaned_data['event_day']
             event_type = form.cleaned_data['event_type']
             event_description = form.cleaned_data['event_description']
+            event_details = form.cleaned_data['event_details']
             tags = form.cleaned_data['tags']
             new_tags_comma_separated = form.cleaned_data['new_tags_comma_separated']
             star_rating = form.cleaned_data['star_rating']
@@ -75,6 +76,7 @@ def add(request):
                 event_day=event_day,
                 event_type=EventType.objects.get(event_type_text=event_type),
                 event_description=event_description,
+                event_details=event_details,
                 star_rating=int(star_rating),
             )
             new_event.tags.set(new_event_tags)

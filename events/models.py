@@ -25,6 +25,7 @@ class Event(models.Model):
     event_day = models.DateField(default=datetime.date.today)
     event_type = models.ForeignKey(EventType, on_delete=models.CASCADE)
     event_description = models.CharField(max_length=200)
+    event_details = models.TextField(blank=True)
     tags = models.ManyToManyField(Tag, blank=True)
     star_rating = models.IntegerField(default=1)
 
